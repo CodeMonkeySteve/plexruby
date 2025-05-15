@@ -25,7 +25,7 @@ module PlexRubySDK
         field :type, Models::Operations::GetPlaylistContentsQueryParamType, { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
 
 
-        sig { params(playlist_id: ::Float, type: Models::Operations::GetPlaylistContentsQueryParamType).void }
+        sig { params(playlist_id: ::Numeric, type: Models::Operations::GetPlaylistContentsQueryParamType).void }
         def initialize(playlist_id: nil, type: nil)
           @playlist_id = playlist_id
           @type = type

@@ -21,7 +21,7 @@ module PlexRubySDK
         field :play_queue_id, T.nilable(::Float), { 'query_param': { 'field_name': 'playQueueID', 'style': 'form', 'explode': true } }
 
 
-        sig { params(playlist_id: ::Float, uri: ::String, play_queue_id: T.nilable(::Float)).void }
+        sig { params(playlist_id: ::Numeric, uri: ::String, play_queue_id: T.nilable(::Float)).void }
         def initialize(playlist_id: nil, uri: nil, play_queue_id: nil)
           @playlist_id = playlist_id
           @uri = uri

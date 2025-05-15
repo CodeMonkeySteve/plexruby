@@ -294,7 +294,7 @@ module PlexRubySDK
     end
 
 
-    sig { params(playlist_id: ::Float, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPlaylistResponse) }
+    sig { params(playlist_id: ::Integer, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPlaylistResponse) }
     def get_playlist(playlist_id, timeout_ms = nil)
       # get_playlist - Retrieve Playlist
       # Gets detailed metadata for a playlist. A playlist for many purposes (rating, editing metadata, tagging), can be treated like a regular metadata item:
@@ -433,7 +433,7 @@ module PlexRubySDK
     end
 
 
-    sig { params(playlist_id: ::Float, timeout_ms: T.nilable(Integer)).returns(Models::Operations::DeletePlaylistResponse) }
+    sig { params(playlist_id: ::Integer, timeout_ms: T.nilable(Integer)).returns(Models::Operations::DeletePlaylistResponse) }
     def delete_playlist(playlist_id, timeout_ms = nil)
       # delete_playlist - Deletes a Playlist
       # This endpoint will delete a playlist
@@ -563,7 +563,7 @@ module PlexRubySDK
     end
 
 
-    sig { params(playlist_id: ::Float, title: T.nilable(::String), summary: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePlaylistResponse) }
+    sig { params(playlist_id: ::Integer, title: T.nilable(::String), summary: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePlaylistResponse) }
     def update_playlist(playlist_id, title = nil, summary = nil, timeout_ms = nil)
       # update_playlist - Update a Playlist
       # From PMS version 1.9.1 clients can also edit playlist metadata using this endpoint as they would via `PUT /library/metadata/{playlistID}`
@@ -697,7 +697,7 @@ module PlexRubySDK
     end
 
 
-    sig { params(playlist_id: ::Float, type: Models::Operations::GetPlaylistContentsQueryParamType, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPlaylistContentsResponse) }
+    sig { params(playlist_id: ::Integer, type: Models::Operations::GetPlaylistContentsQueryParamType, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPlaylistContentsResponse) }
     def get_playlist_contents(playlist_id, type, timeout_ms = nil)
       # get_playlist_contents - Retrieve Playlist Contents
       # Gets the contents of a playlist. Should be paged by clients via standard mechanisms. 
@@ -841,7 +841,7 @@ module PlexRubySDK
     end
 
 
-    sig { params(playlist_id: ::Float, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ClearPlaylistContentsResponse) }
+    sig { params(playlist_id: ::Integer, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ClearPlaylistContentsResponse) }
     def clear_playlist_contents(playlist_id, timeout_ms = nil)
       # clear_playlist_contents - Delete Playlist Contents
       # Clears a playlist, only works with dumb playlists. Returns the playlist.
@@ -971,7 +971,7 @@ module PlexRubySDK
     end
 
 
-    sig { params(playlist_id: ::Float, uri: ::String, play_queue_id: T.nilable(::Float), timeout_ms: T.nilable(Integer)).returns(Models::Operations::AddPlaylistContentsResponse) }
+    sig { params(playlist_id: ::Integer, uri: ::String, play_queue_id: T.nilable(::Float), timeout_ms: T.nilable(Integer)).returns(Models::Operations::AddPlaylistContentsResponse) }
     def add_playlist_contents(playlist_id, uri, play_queue_id = nil, timeout_ms = nil)
       # add_playlist_contents - Adding to a Playlist
       # Adds a generator to a playlist, same parameters as the POST to create. With a dumb playlist, this adds the specified items to the playlist.

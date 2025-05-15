@@ -17,7 +17,7 @@ module PlexRubySDK
         field :playlist_id, ::Float, { 'path_param': { 'field_name': 'playlistID', 'style': 'simple', 'explode': false } }
 
 
-        sig { params(playlist_id: ::Float).void }
+        sig { params(playlist_id: ::Numeric).void }
         def initialize(playlist_id: nil)
           @playlist_id = playlist_id
         end

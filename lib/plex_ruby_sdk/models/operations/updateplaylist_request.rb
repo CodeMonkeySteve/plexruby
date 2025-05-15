@@ -21,7 +21,7 @@ module PlexRubySDK
         field :title, T.nilable(::String), { 'query_param': { 'field_name': 'title', 'style': 'form', 'explode': true } }
 
 
-        sig { params(playlist_id: ::Float, summary: T.nilable(::String), title: T.nilable(::String)).void }
+        sig { params(playlist_id: ::Numeric, summary: T.nilable(::String), title: T.nilable(::String)).void }
         def initialize(playlist_id: nil, summary: nil, title: nil)
           @playlist_id = playlist_id
           @summary = summary
