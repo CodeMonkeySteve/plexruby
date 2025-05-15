@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 3.0'
 
+  s.add_dependency('base64')
   s.add_dependency('faraday')
   s.add_dependency('faraday-multipart')
   s.add_dependency('faraday-retry', '~> 2.2.1')
